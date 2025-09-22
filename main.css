@@ -5,3 +5,90 @@ html {
   margin: 0px;
   padding: 0px;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* no horizontal scroll */
+}
+
+/* Name left, links right */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: tan;
+}
+
+header h1 {
+  font-weight: bold;
+}
+
+/* Links in one row */
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+/* evens out links */
+header nav ul li {
+  margin-left: 15px;
+}
+
+/* Removes underline and makes links black */
+header nav a {
+  text-decoration: none;
+  color: black;
+}
+
+/* contains copyright */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: grey;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  gap: 20px; /* equal spacing */
+  padding: 20px;
+  width: 100%;
+}
+
+.store-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 350px;
+  border: 1px solid grey;
+  padding: 10px;
+  background: whitesmoke;
+  text-align: left;
+}
+
+.store-item img {
+  max-width: 100%;
+  max-height: 150px;
+  margin-bottom: 10px;
+}
+
+/* Makes it better spaced */
+.store-item p {
+  margin-bottom: 10px;
+}
+
+/* Make the spans into a horizontal row */
+.store-item span {
+  position: absolute;
+  bottom: 10px;
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+}
+
+/* Evens them out */
+.store-item span:nth-last-child(3) { left: 5%; }
+.store-item span:nth-last-child(2) { left: 35%; }
+.store-item span:last-child { right: 5%; }
